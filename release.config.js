@@ -1,8 +1,9 @@
-/* eslint-env node */
-const { readFileSync } = require('fs');
-const { join } = require('path');
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
 
-module.exports = {
+const __dirname = import.meta.dirname;
+
+export default {
     branches: [
         'main',
         '+([0-9])?(.{+([0-9]),x}).x',
@@ -22,8 +23,8 @@ module.exports = {
             {
                 writerOpts: {
                     commitPartial: readFileSync(
-                        join(__dirname, 'commit.hbs'),
-                        'utf-8'
+                        path.join(__dirname, 'commit.hbs'),
+                        'utf8'
                     ),
                 },
             },
