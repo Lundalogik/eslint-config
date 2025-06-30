@@ -10,19 +10,14 @@ Install using **npm**:
 npm i -D @limetech/eslint-config
 ```
 
-Then put a file called `.eslintrc.js` in your package root, with the following
-content:
+Then put a file called `eslint.config.mjs` in your package root, with the following content:
 
 ```js
-/* eslint-env node */
-module.exports = {
-    extends: ['@limetech/eslint-config'],
-};
-```
+import { defineConfig } from 'eslint/config';
+import config from '@limetech/eslint-config';
 
-Then either copy the file at `node_modules/@limetech/eslint-config/.prettierrc`
-to your package root, or create a symlink called `.prettierrc` in the package
-root, pointing to `node_modules/@limetech/eslint-config/.prettierrc`.
+export default defineConfig([...config]);
+```
 
 Finally, add a script for running eslint to your `package.json`, for example:
 
@@ -30,8 +25,8 @@ Finally, add a script for running eslint to your `package.json`, for example:
 {
   …
   "scripts": {
-    "lint": "eslint \"**/*.{ts,tsx,js}\" --max-warnings=0",
-    "lint:fix": "eslint \"**/*.{ts,tsx,js}\" --fix --max-warnings=0"
+    "lint": "eslint --max-warnings=0",
+    "lint:fix": "eslint --fix --max-warnings=0"
   },
 }
 ```
@@ -41,3 +36,9 @@ warnings or errors. On your own machine, you would typically run
 `npm run lint:fix` instead, to have eslint automatically fix as many of the
 problems as possible, and only output warnings or errors for problems that
 cannot be fixed automatically.
+
+This package also exposes a reusable Prettier config that can be used to lint and format other files not natively covered by ESLint, such as CSS/SCSS files. To use it, create a `.prettierrc.mjs` file in your package root with the following content:
+
+```js
+export { default } from '@limetech/eslint-config/prettier.config.js';
+```
