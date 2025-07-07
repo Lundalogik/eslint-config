@@ -1,9 +1,9 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
+const { readFileSync } = require('node:fs');
+const path = require('node:path');
 
 const __dirname = import.meta.dirname;
 
-export default {
+module.exports = {
     branches: [
         'main',
         '+([0-9])?(.{+([0-9]),x}).x',
@@ -21,10 +21,11 @@ export default {
         [
             '@semantic-release/release-notes-generator',
             {
+                preset: 'conventionalcommits',
                 writerOpts: {
                     commitPartial: readFileSync(
-                        path.join(__dirname, 'commit.hbs'),
-                        'utf8'
+                        join(__dirname, 'commit.hbs'),
+                        'utf-8',
                     ),
                 },
             },
@@ -32,7 +33,14 @@ export default {
         '@semantic-release/changelog',
         '@semantic-release/npm',
         '@semantic-release/git',
-        '@semantic-release/github',
+        [
+            '@semantic-release/github',
+            {
+                failComment: false,
+                failTitle: false,
+                labels: false,
+            },
+        ],
     ],
     npmPublish: true,
 };
