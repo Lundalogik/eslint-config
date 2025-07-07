@@ -1,8 +1,6 @@
 const { readFileSync } = require('node:fs');
 const path = require('node:path');
 
-const __dirname = import.meta.dirname;
-
 module.exports = {
     branches: [
         'main',
@@ -24,8 +22,8 @@ module.exports = {
                 preset: 'conventionalcommits',
                 writerOpts: {
                     commitPartial: readFileSync(
-                        join(__dirname, 'commit.hbs'),
-                        'utf-8',
+                        path.join(__dirname, 'commit.hbs'),
+                        'utf8'
                     ),
                 },
             },
