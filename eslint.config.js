@@ -56,7 +56,7 @@ export default defineConfig([
         plugins: { json },
         files: ['**/*.json'],
         ignores: ['package*.json'],
-        language: 'json/json',
+        language: 'json/jsonc',
         rules: {
             'json/no-duplicate-keys': 'error',
             'prettier/prettier': [
