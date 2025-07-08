@@ -1,3 +1,11 @@
+## [3.0.2](https://github.com/Lundalogik/eslint-config/compare/v3.0.1...v3.0.2) (2025-07-08)
+
+
+### Bug Fixes
+
+
+* **eslint.config.js:** allow comments in json files ([8883d5d](https://github.com/Lundalogik/eslint-config/commit/8883d5d3595136ba27daf8c32ac81e6d9918bd0b))
+
 ## [3.0.1](https://github.com/Lundalogik/eslint-config/compare/v3.0.0...v3.0.1) (2025-07-08)
 
 
