@@ -1,3 +1,20 @@
+## [3.0.0](https://github.com/Lundalogik/eslint-config/compare/v2.0.2...v3.0.0) (2025-07-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **eslint:** Many rules might have changed, resulting in breaking builds
+
+### Features
+
+
+* **eslint:** update to ESLint 9 ([a126928](https://github.com/Lundalogik/eslint-config/commit/a12692869a5ccb97ac2abaead0e63a0c82235060))
+
+### Bug Fixes
+
+
+* remove __dirname leftover ([014c778](https://github.com/Lundalogik/eslint-config/commit/014c778f6bc3d0dfc3d038a4da3bb47013716ea8))
+
 ## [2.0.2](https://github.com/Lundalogik/eslint-config/compare/v2.0.1...v2.0.2) (2023-11-15)
 
 
