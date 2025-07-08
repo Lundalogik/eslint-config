@@ -1,3 +1,11 @@
+## [3.0.1](https://github.com/Lundalogik/eslint-config/compare/v3.0.0...v3.0.1) (2025-07-08)
+
+
+### Bug Fixes
+
+
+* **eslint.config.js:** ensure files are checked in with unix style line endings ([03e073a](https://github.com/Lundalogik/eslint-config/commit/03e073a8b55eeaa160b5a7c5051de12dd3e9402a))
+
 ## [3.0.0](https://github.com/Lundalogik/eslint-config/compare/v2.0.2...v3.0.0) (2025-07-08)
 
 
