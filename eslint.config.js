@@ -65,6 +65,7 @@ export default defineConfig([
                     parser: 'jsonc',
                     tabWidth: 2,
                     trailingComma: 'none',
+                    endOfLine: process.platform === 'win32' ? 'auto' : 'lf',
                 },
             ],
         },
@@ -112,6 +113,10 @@ export default defineConfig([
                     checkArguments: false,
                     checkArrowFunctionBody: false,
                 },
+            ],
+            'linebreak-style': [
+                process.platform === 'win32' ? 'off' : 'error',
+                'unix',
             ],
         },
     },
