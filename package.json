@@ -1,6 +1,6 @@
 {
   "name": "@limetech/eslint-config",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Reusable lint rules for use in other packages.",
   "author": "Lime Technologies",
   "license": "Apache-2.0",

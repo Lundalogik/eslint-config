@@ -1,3 +1,15 @@
+## [4.0.0](https://github.com/Lundalogik/eslint-config/compare/v3.0.2...v4.0.0) (2025-08-25)
+
+
+### ⚠ BREAKING CHANGES
+
+* Require Node.js 20.10
+
+### Features
+
+
+* update eslint-plugin-unicorn from v59.0.1 to v60.0.0 ([cd39675](https://github.com/Lundalogik/eslint-config/commit/cd39675a629061e447aeb92f81b5a6918360432b))
+
 ## [3.0.2](https://github.com/Lundalogik/eslint-config/compare/v3.0.1...v3.0.2) (2025-07-08)
 
 
