@@ -1,3 +1,11 @@
+## [4.0.1](https://github.com/Lundalogik/eslint-config/compare/v4.0.0...v4.0.1) (2026-04-14)
+
+
+### Bug Fixes
+
+
+* **deps:** upgrade `eslint-plugin-sonarjs` from v3 to v4 ([640fc34](https://github.com/Lundalogik/eslint-config/commit/640fc34b06ed1bdb3700aef62a287580fa907ff0))
+
 ## [4.0.0](https://github.com/Lundalogik/eslint-config/compare/v3.0.2...v4.0.0) (2025-08-25)
 
 
