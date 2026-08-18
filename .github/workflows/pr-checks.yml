@@ -14,6 +14,14 @@ jobs:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
     - uses: ./.github/actions/set-up-node
     - run: npm ci
+    # A step of this job rather than a job of its own: it reuses the install
+    # above, and it gates automerge through `needs: [lint]` without adding a job
+    # name that the branch ruleset's required checks would have to be updated
+    # for. It runs before the lint because it is the more specific failure -- on
+    # a Dependabot bump that both drifts the range and breaks the lint, its
+    # message is the one that explains the other.
+    - name: Check the typescript peer range still matches typescript-eslint
+      run: npm run check:peer-range
     - run: npm run lint
 
   commitlint:
