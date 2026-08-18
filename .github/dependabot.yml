@@ -7,9 +7,20 @@ updates:
     # Check the npm registry for updates every day (weekdays)
     schedule:
       interval: "daily"
-    # Only create pull requests to update lockfiles.
-    # Ignore any new versions that would require package manifest changes.
-    versioning-strategy: lockfile-only
+    # increase-if-necessary so that a new major of a lint dependency -- notably
+    # typescript-eslint, pinned `^8` and otherwise never proposed -- opens a
+    # manifest PR that widens its range. The lint job's check:peer-range then
+    # fails on that PR and prints the typescript peer range to mirror. In-range
+    # updates stay lockfile-only.
+    versioning-strategy: increase-if-necessary
+    ignore:
+      # Hold typescript at its current major. A new major (the TypeScript 7
+      # native rewrite, and every one after) falls outside typescript-eslint's
+      # peer range, so a bump here could only ever produce a PR that
+      # check:peer-range must fail. It becomes adoptable via the
+      # typescript-eslint bump that widens the range, not on its own.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
     groups:
       lint:
         patterns:
@@ -18,4 +29,7 @@ updates:
           - "eslint"
           - "eslint-*"
           - "prettier"
+          # `typescript` is pinned to the range `typescript-eslint` declares,
+          # so the two move together and belong in the same PR.
+          - "typescript"
           - "typescript-eslint"
