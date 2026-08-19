@@ -1,3 +1,11 @@
+## [4.1.0](https://github.com/Lundalogik/eslint-config/compare/v4.0.1...v4.1.0) (2026-08-19)
+
+
+### Features
+
+
+* declare `typescript` as an optional peer dependency ([5983198](https://github.com/Lundalogik/eslint-config/commit/598319800e48900e95c7914e7b01c09af0ed5779)), closes [Lundalogik/limepkg-ai-agents#97](https://github.com/Lundalogik/limepkg-ai-agents/issues/97)
+
 ## [4.0.1](https://github.com/Lundalogik/eslint-config/compare/v4.0.0...v4.0.1) (2026-04-14)
 
 
