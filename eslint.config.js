@@ -101,12 +101,17 @@ export default defineConfig([
                 },
             ],
             'unicorn/no-null': 'off',
-            'unicorn/prevent-abbreviations': 'off',
+            'unicorn/name-replacements': 'off',
             'unicorn/no-array-callback-reference': 'off',
             'unicorn/prefer-global-this': 'off',
             'unicorn/prefer-switch': 'off',
             'unicorn/prefer-ternary': 'off',
             'unicorn/consistent-function-scoping': 'off',
+            'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
+            'unicorn/single-line-block-comment-style': 'off',
+            'unicorn/max-nested-calls': 'off',
+            'unicorn/consistent-class-member-order': 'off',
+            'unicorn/consistent-boolean-name': 'off',
             'unicorn/no-useless-undefined': [
                 'error',
                 {
@@ -166,6 +171,12 @@ export default defineConfig([
         files: ['**/*.cjs'],
         rules: {
             '@typescript-eslint/no-require-imports': 'off',
+        },
+    },
+    {
+        files: ['**/*.config.{js,ts,mjs,mts,cjs,cts}'],
+        rules: {
+            'unicorn/no-top-level-side-effects': 'off',
         },
     },
     {
