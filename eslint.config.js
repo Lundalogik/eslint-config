@@ -112,6 +112,8 @@ export default defineConfig([
             'unicorn/max-nested-calls': 'off',
             'unicorn/consistent-class-member-order': 'off',
             'unicorn/consistent-boolean-name': 'off',
+            'unicorn/prefer-number-coercion': 'off',
+            'unicorn/prefer-simple-condition-first': 'off',
             'unicorn/no-useless-undefined': [
                 'error',
                 {
@@ -134,6 +136,7 @@ export default defineConfig([
             'no-console': 'off',
             'no-magic-numbers': 'off',
             camelcase: 'off',
+            'unicorn/no-global-object-property-assignment': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
             'sonarjs/no-nested-functions': 'off',
             'sonarjs/pseudo-random': 'off',
@@ -165,6 +168,15 @@ export default defineConfig([
                     message: "don't focus tests",
                 },
             ],
+        },
+    },
+    {
+        files: [
+            '**/{jest,vitest}{.,-}setup*.{js,ts,mjs,mts,cjs,cts}',
+            '**/setupTests.{js,ts}',
+        ],
+        rules: {
+            'unicorn/no-global-object-property-assignment': 'off',
         },
     },
     {
