@@ -26,12 +26,18 @@ jobs:
 
   commitlint:
     name: Commitlint
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        if: github.actor != 'dependabot[bot]' && github.event_name != 'merge_group'
-      - uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed # v6.2.1
-        if: github.actor != 'dependabot[bot]' && github.event_name != 'merge_group'
+        with:
+          fetch-depth: 0
+      - uses: ./.github/actions/set-up-node
+      - run: npm ci
+      - run: npx commitlint --from "$BASE_SHA" --to "$HEAD_SHA" --verbose
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
   autosquash:
     name: Block Autosquash Commits
