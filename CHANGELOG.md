@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/Lundalogik/eslint-config/compare/v5.0.0...v5.0.1) (2026-10-03)
+
+### Bug Fixes
+
+
+* **eslint:** turn off unicorn rules that can't be fixed mechanically ([333b9d4](https://github.com/Lundalogik/eslint-config/commit/333b9d4d413174914db858ae549ea67725cb1641))
+
 ## [5.0.0](https://github.com/Lundalogik/eslint-config/compare/v4.1.0...v5.0.0) (2026-10-03)
 
 ### ⚠ BREAKING CHANGES
