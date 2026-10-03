@@ -1,3 +1,17 @@
+## [5.0.0](https://github.com/Lundalogik/eslint-config/compare/v4.1.0...v5.0.0) (2026-10-03)
+
+### ⚠ BREAKING CHANGES
+
+* **eslint:** Requires ESLint 10.4 or later. Other newly recommended
+unicorn rules are enabled and will report new errors in consuming
+projects.
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+### Features
+
+
+* **eslint:** update to ESLint 10, eslint-plugin-unicorn 77 and eslint-plugin-jsdoc 65 ([dd2baf1](https://github.com/Lundalogik/eslint-config/commit/dd2baf177333f164b16a8aa9644b26af4be213ab))
+
 ## [4.1.0](https://github.com/Lundalogik/eslint-config/compare/v4.0.1...v4.1.0) (2026-08-19)
 
 
