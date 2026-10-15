@@ -114,6 +114,9 @@ export default defineConfig([
             'unicorn/consistent-boolean-name': 'off',
             'unicorn/prefer-number-coercion': 'off',
             'unicorn/prefer-simple-condition-first': 'off',
+            'unicorn/prefer-promise-with-resolvers': 'off',
+            'unicorn/prefer-iterator-to-array': 'off',
+            'unicorn/prefer-dom-node-html-methods': 'off',
             'unicorn/no-useless-undefined': [
                 'error',
                 {
@@ -141,6 +144,8 @@ export default defineConfig([
             'sonarjs/no-nested-functions': 'off',
             'sonarjs/pseudo-random': 'off',
             'unicorn/prefer-structured-clone': 'off',
+            'unicorn/no-top-level-assignment-in-function': 'off',
+            'unicorn/no-unnecessary-parameters': 'off',
             'ban/ban': [
                 'error',
                 {
@@ -177,6 +182,7 @@ export default defineConfig([
         ],
         rules: {
             'unicorn/no-global-object-property-assignment': 'off',
+            'unicorn/no-top-level-side-effects': 'off',
         },
     },
     {
