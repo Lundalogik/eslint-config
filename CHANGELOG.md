@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/Lundalogik/eslint-config/compare/v5.0.1...v5.0.2) (2026-10-15)
+
+### Bug Fixes
+
+
+* **eslint:** turn off unicorn rules that consumers all override ([f68ba5b](https://github.com/Lundalogik/eslint-config/commit/f68ba5b9b1ed66dd62af14cdc71b8cdb30a35fdc))
+
 ## [5.0.1](https://github.com/Lundalogik/eslint-config/compare/v5.0.0...v5.0.1) (2026-10-03)
 
 ### Bug Fixes
