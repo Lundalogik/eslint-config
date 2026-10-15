@@ -1,3 +1,11 @@
+## [5.0.3](https://github.com/Lundalogik/eslint-config/compare/v5.0.2...v5.0.3) (2026-10-15)
+
+### Bug Fixes
+
+
+* declare the Node versions the bundled plugins support ([22569f2](https://github.com/Lundalogik/eslint-config/commit/22569f218df6ce02badbadc7e75a89bef179642d))
+* **eslint:** require a typescript-eslint version that supports ESLint 10 ([daea5d6](https://github.com/Lundalogik/eslint-config/commit/daea5d61601e19c5b962da6524560f1b46d6424c))
+
 ## [5.0.2](https://github.com/Lundalogik/eslint-config/compare/v5.0.1...v5.0.2) (2026-10-15)
 
 ### Bug Fixes
